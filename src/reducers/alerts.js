@@ -11,6 +11,7 @@ const initialState = {
 };
 
 export default function alerts(state = initialState, action = {}) {
+  console.log(action.type)
   switch (action.type) {
   case CONNECT_SUCCESS:
     {
@@ -34,6 +35,7 @@ export default function alerts(state = initialState, action = {}) {
       return Object.assign({}, state, {alerts: []});
     }
   default:
+    console.log("default initializing ",state)
     return state;
   }
 }

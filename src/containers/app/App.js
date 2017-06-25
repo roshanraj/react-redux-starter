@@ -1,16 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { logout } from '../../actions/auth';
-import './app.css';
+
+import './app.scss';
 
 class App extends Component {
-  handleLogout() {
-    const { user } = this.props;
-    this.props.dispatch(logout(user));
-    this.context.router.replace('/login');
-  }
+
   render() {
     const { user } = this.props;
+    console.log("printing")
     return (
       <div className="container">
         <div className="container appContent">

@@ -27,22 +27,16 @@ import {browserHistory as history} from 'react-router';
 //////////////////////////////////////////////////////////////////////////
 
 import configureStore from './store/configureStore';
-import connectToAlerts from './utils/socketUtils';
 
 import App from './containers/app/App';
-import Login from './containers/login/Login';
-import RestrictPage from './containers/misc/RestrictPage';
 import Home from './containers/home/Home';
-import UsersPage from './containers/user/UsersPage';
-import ReposPage from './containers/repo/ReposPage';
-import About from './containers/about/About';
+import Page1 from './containers/page1/Page1';
 import NotFound from './containers/misc/NotFound';
-import Messaging from './containers/messaging/Messaging'
 
 import './index.scss';
 
 const store = configureStore();
-connectToAlerts(store);
+// connectToAlerts(store);
 
 ReactDOM.render(
   <Provider store={store}>
@@ -50,10 +44,7 @@ ReactDOM.render(
 
             <Route path="/" component={App}>
               <IndexRoute component={Home}/>
-              <Route component={RestrictPage}>
-                <Route path="/users" component={UsersPage} />
-                <Route path="/repos" component={ReposPage} />
-              </Route>
+              <Route path="/page1" component={Page1} />
               <Route path="*" component={NotFound}/>
          </Route>
       </Router>
