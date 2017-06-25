@@ -1,0 +1,21 @@
+html, body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
+
+
+$purple : #a290d1;
+$purple-light : #b690d1;
+$blue : #25a6f7;
+  .sparkline a {
+      span {
+        background: $purple-light;
+        
+      }
+
+      &:hover span {
+        background: $blue;
+      }
+    }
+
+}
