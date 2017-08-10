@@ -120,7 +120,7 @@ const BASE_CSS_LOADER = 'css?sourceMap&-minimize'
 
 webpackConfig.module.loaders.push({
   test    : /\.scss$/,
-  exclude : null,
+  exclude : /node_modules/,
   loaders : [
     'style',
     BASE_CSS_LOADER,

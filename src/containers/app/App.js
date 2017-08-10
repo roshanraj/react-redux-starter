@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-
+import Header from '../../components/header';
 import './app.scss';
 
 class App extends Component {
@@ -9,10 +9,13 @@ class App extends Component {
     const { user } = this.props;
     console.log("printing")
     return (
-      <div className="container">
+      <div>
+      <Header></Header>
+      <div className="container"> 
         <div className="container appContent">
           {this.props.children}
         </div>
+      </div>
       </div>
     );
   }
